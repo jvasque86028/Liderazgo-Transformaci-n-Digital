@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+/* globals alert, prompt, console, document, window, navigator */
 // ====================================================
 // 🚀 VERIFICACIÓN DE CARGA DEL SCRIPT
 // ====================================================
