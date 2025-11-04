@@ -153,3 +153,10 @@ main section:nth-of-type(4) { animation-delay: .2s; }
   .thumb, .thumb-svg { width: 120px; height: 68px; }
   section { padding: 1rem; }
 }
+
+#sharePopup {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.6);
+}

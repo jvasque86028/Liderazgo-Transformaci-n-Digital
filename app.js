@@ -60,21 +60,29 @@ if (likeBtn) {
 }
 
 // ====================================================
-// 📤 BOTÓN “COMPARTIR” (Versión moderna con opciones)
+// 📤 BOTÓN “COMPARTIR” con la API Nativa del Navegador
 // ====================================================
-// Mostrar/Ocultar ventana
-shareBtn.addEventListener('click', () => {
-  const popup = document.getElementById('sharePopup');
-  popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
-});
+const shareBtn = document.getElementById('shareBtn');
 
-// Cerrar al hacer clic fuera
-document.addEventListener('click', (e) => {
-  const popup = document.getElementById('sharePopup');
-  if (!shareBtn.contains(e.target) && !popup.contains(e.target)) {
-    popup.style.display = 'none';
-  }
-});
+if (shareBtn) {
+  shareBtn.addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: document.title,
+          text: "🌐 Explora esta página sobre Liderazgo Lean & Transformación Digital.",
+          url: window.location.href
+        });
+        alert("✅ ¡Gracias por compartir!");
+      } catch (err) {
+        console.log("❌ Usuario canceló el compartir o hubo un error:", err);
+      }
+    } else {
+      // Si el navegador NO soporta navigator.share
+      alert("⚠️ Tu navegador no soporta la función de compartir nativa. Usa los botones manuales.");
+    }
+  });
+}
 
 // Funciones de compartir
 document.getElementById('shareWhatsapp').addEventListener('click', () => {
@@ -158,5 +166,46 @@ function despedida() {
 }
 
 setTimeout(despedida, 3000);
+
+// ====================================================
+// 🔎 BUSCADOR INTERNO DE CONTENIDO
+// ====================================================
+const form = document.getElementById("siteSearch");
+const searchInput = document.getElementById("q");
+
+if (form && searchInput) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // evita que recargue la página
+
+    const query = searchInput.value.trim().toLowerCase();
+
+    if (query === "") {
+      alert("Por favor, escribe un término de búsqueda.");
+      return;
+    }
+
+    // Quitar resaltados anteriores
+    document.querySelectorAll(".search-focus").forEach(el => {
+      el.classList.remove("search-focus");
+    });
+
+    // Buscar coincidencias en el contenido visible
+    const elements = document.querySelectorAll("section, article, div, p, h1, h2, h3, h4, h5");
+    let found = false;
+
+    elements.forEach(el => {
+      if (el.textContent.toLowerCase().includes(query)) {
+        el.classList.add("search-focus");
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+        found = true;
+      }
+    });
+
+    if (!found) {
+      alert(`No se encontró ningún resultado para "${query}".`);
+    }
+  });
+}
+
 
 
