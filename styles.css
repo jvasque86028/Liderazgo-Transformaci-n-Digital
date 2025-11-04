@@ -1,0 +1,155 @@
+/* ===== Reset suave y base tipográfica ===== */
+html { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+  line-height: 1.6;
+  background-color: #0d1117; /* Fondo oscuro elegante */
+  color: #e6e6e6; /* Texto claro */
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Tipografía general */
+h1, h2, h3 {
+  font-weight: 700;
+  color: #f5c518; /* Dorado líder */
+}
+
+p, label, input, textarea {
+  color: #e6e6e6;
+}
+
+section {
+  scroll-margin-top: 80px;
+  background-color: #161b22; /* Paneles ligeramente más claros */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .6);
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Accesibilidad ===== */
+:focus-visible {
+  outline: 3px solid #1f6feb; /* Azul vibrante */
+  outline-offset: 2px;
+  border-radius: .25rem;
+}
+
+/* Animaciones y scroll */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* ===== Componentes visuales ===== */
+.btn {
+  border-radius: .5rem;
+  font-weight: 600;
+  transition: all .3s ease;
+}
+
+/* Botones principales */
+.btn-primary {
+  background-color: #1f6feb;
+  border: none;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #388bfd;
+  box-shadow: 0 0 12px rgba(31, 111, 235, .5);
+}
+
+/* Botones secundarios */
+.btn-outline-secondary {
+  border: 1px solid #f5c518;
+  color: #f5c518;
+  background-color: transparent;
+}
+.btn-outline-secondary:hover {
+  background-color: #f5c518;
+  color: #0d1117;
+}
+
+/* Cards y tablas */
+.card {
+  background-color: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 12px;
+  color: #e6e6e6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
+}
+.card img, .card svg {
+  border: 1px solid #30363d;
+}
+
+/* Inputs y textarea */
+input, textarea {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: .5rem;
+  padding: .5rem .75rem;
+}
+input:focus, textarea:focus {
+  border-color: #1f6feb;
+  box-shadow: 0 0 5px rgba(31, 111, 235, .6);
+  outline: none;
+}
+
+/* Placeholder más tenue */
+::placeholder {
+  color: #8b949e;
+}
+
+/* Estado de éxito del formulario */
+#formStatus {
+  background-color: #1f6feb;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: .75rem;
+}
+
+/* Footer */
+footer {
+  background-color: #0d1117;
+  color: #8b949e;
+  border-top: 1px solid #21262d;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+footer a {
+  color: #f5c518;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* ===== Animación de entrada ===== */
+main section {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeIn .6s ease forwards;
+}
+main section:nth-of-type(1) { animation-delay: .05s; }
+main section:nth-of-type(2) { animation-delay: .1s; }
+main section:nth-of-type(3) { animation-delay: .15s; }
+main section:nth-of-type(4) { animation-delay: .2s; }
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Resaltado de búsqueda ===== */
+.search-focus {
+  box-shadow: 0 0 0 3px rgba(245,197,24,.45) inset;
+  border-radius: .5rem;
+  transition: box-shadow .3s;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 576px) {
+  .thumb, .thumb-svg { width: 120px; height: 68px; }
+  section { padding: 1rem; }
+}

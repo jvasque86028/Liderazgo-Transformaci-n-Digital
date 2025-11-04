@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Liderazgo Lean y Transformación Digital — Ingeniería Industrial (EAN)</title>
+  <meta name="description" content="Proyecto HTML5 con enfoque en liderazgo, Lean, OEE, Scrum e Industria 4.0 para Ingeniería Industrial (Universidad EAN).">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+
+  <!-- Barra superior -->
+  <header class="navbar navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center gap-3">
+        <a class="navbar-brand fw-bold" href="#top" aria-label="Inicio">YouLearn IE</a>
+      </div>
+
+      <!-- Búsqueda funcional -->
+      <form id="siteSearch" class="d-none d-md-flex flex-grow-1 mx-3" role="search" aria-label="Buscar en la página">
+        <input id="q" class="form-control" type="search" placeholder="Buscar (ej.: liderazgo, Lean, OEE…)" aria-label="Buscar">
+        <button class="btn btn-outline-light ms-2" type="submit">🔍</button>
+      </form>
+
+      <!-- Vínculos internos -->
+      <nav aria-label="Navegación interna" class="d-none d-md-block">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white-50" href="#portada">Portada</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#video">Video</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#tabla">Tabla</a></li>
+          <li class="nav-item"><a class="nav-link text-white-50" href="#formulario">Formulario</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contenido -->
+  <main id="top" class="container my-4">
+    <div class="row g-4">
+      <!-- Columna principal -->
+      <div class="col-lg-8">
+
+        <!-- PORTADA -->
+        <section id="portada" class="mb-3" aria-label="Portada de liderazgo">
+          <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden bg-dark">
+            <!-- SVG 16:9 -->
+            <svg viewBox="0 0 1600 900" class="w-100 h-100" role="img" aria-label="Portada Liderazgo Lean & Transformación Digital">
+              <defs>
+                <linearGradient id="grad" x1="0" x2="1">
+                  <stop offset="0" stop-color="#0d6efd"></stop>
+                  <stop offset="1" stop-color="#198754"></stop>
+                </linearGradient>
+              </defs>
+              <rect width="1600" height="900" fill="url(#grad)"></rect>
+              <g fill="#ffffff" fill-opacity=".2">
+                <circle cx="250" cy="250" r="120"></circle>
+                <circle cx="420" cy="340" r="70"></circle>
+                <rect x="220" y="500" width="520" height="28" rx="14"></rect>
+              </g>
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle"
+                    font-size="56" font-family="Segoe UI, Arial" fill="#ffffff">
+                Liderazgo Lean & Transformación Digital
+              </text>
+              <text x="50%" y="60%" text-anchor="middle" font-size="26"
+                    font-family="Segoe UI, Arial" fill="rgba(255,255,255,.85)">
+                Ingeniería Industrial — Universidad EAN
+              </text>
+            </svg>
+          </div>
+        </section>
+
+        <!-- VIDEO -->
+        <section id="video" class="mb-2">
+          <h2 class="visually-hidden">Video</h2>
+          <div class="ratio ratio-16x9 shadow-sm rounded overflow-hidden bg-dark">
+            <iframe
+              src="https://www.youtube.com/embed/pMn1dHS5H5o?rel=0&modestbranding=1"
+              title="Liderazgo e Innovación — Video"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+
+        <!-- Título, badges y acciones -->
+        <article aria-labelledby="titulo-video">
+          <h1 id="titulo-video" class="h4 fw-bold mb-2">
+            Liderazgo para la Mejora Continua: del piso de planta a la estrategia
+          </h1>
+
+          <ul class="list-inline small text-muted mb-2">
+            <li class="list-inline-item badge bg-light text-dark">Lean / Kaizen</li>
+            <li class="list-inline-item badge bg-light text-dark">OEE & KPIs</li>
+            <li class="list-inline-item badge bg-light text-dark">Scrum en mejora</li>
+            <li class="list-inline-item badge bg-light text-dark">Industria 4.0</li>
+          </ul>
+
+          <div class="d-flex flex-wrap align-items-center justify-content-between border-bottom pb-3 mb-3">
+            <div class="text-muted small">
+              Ingeniería Industrial — Universidad EAN • HTML5 + CSS3 + Bootstrap • Caso práctico: liderazgo aplicado a Lean/Industria 4.0
+            </div>
+            <div class="d-flex gap-2">
+              <button id="likeBtn" class="btn btn-primary">👍 Me gusta</button>
+              <button id="shareBtn" class="btn btn-secondary">🔗 Compartir</button>
+              <a class="btn btn-outline-primary btn-sm" href="#formulario">Comentar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Descripción + imagen integrada + audio -->
+        <section class="mb-4">
+          <h2 class="visually-hidden">Descripción</h2>
+          <div class="card shadow-sm">
+            <button class="btn text-start p-3" data-bs-toggle="collapse" data-bs-target="#desc" aria-expanded="true" aria-controls="desc">
+              <strong>Descripción</strong> — Liderazgo en la era de la Industria 4.0
+            </button>
+            <div id="desc" class="collapse show">
+              <div class="card-body pt-0">
+                <p>
+                  Este proyecto integra <strong>liderazgo</strong> con <strong>Ingeniería Industrial</strong> en un contexto de
+                  <em>mejora continua</em> y <em>Transformación Digital</em>. En la práctica, un líder industrial facilita la adopción de
+                  <strong>Lean</strong> (5S, Kaizen, Kanban), usa <strong>datos</strong> (OEE, KPIs) para decidir y guía equipos
+                  multidisciplinarios en entornos de <strong>Industria 4.0</strong> (IoT, automatización, analítica). La maquetación “watch”
+                  comunica el tema con claridad y evidencia técnica (HTML5, CSS3, Bootstrap).
+                </p>
+
+                <!-- Ilustración SVG inline (válida) -->
+                <figure class="my-3 text-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675"
+                       class="img-fluid rounded shadow-sm" role="img" aria-label="Ilustración de liderazgo industrial" style="max-width:560px">
+                    <defs>
+                      <linearGradient id="g1" x1="0" x2="1">
+                        <stop offset="0" stop-color="#0d6efd"></stop>
+                        <stop offset="1" stop-color="#198754"></stop>
+                      </linearGradient>
+                    </defs>
+                    <rect width="1200" height="675" fill="url(#g1)"></rect>
+                    <circle cx="200" cy="350" r="90" fill="#ffffff" fill-opacity="0.15"></circle>
+                    <circle cx="340" cy="300" r="60" fill="#ffffff" fill-opacity="0.15"></circle>
+                    <rect x="120" y="420" width="520" height="24" rx="12" fill="#ffffff" fill-opacity="0.25"></rect>
+                    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+                          font-family="Segoe UI, Arial" font-size="48" fill="#ffffff">Liderazgo e Innovación</text>
+                  </svg>
+                  <figcaption class="small text-muted mt-2">Imagen ilustrativa integrada (no requiere internet).</figcaption>
+                </figure>
+
+                <!-- AUDIO -->
+                <figure class="my-3">
+                  <figcaption class="small text-muted mb-1">Música ambiente corporativa (demo)</figcaption>
+                  <audio controls preload="none" aria-label="Música ambiente corporativa">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento <code>audio</code>.
+                  </audio>
+                </figure>
+
+                <ul class="small text-muted mb-0">
+                  <li>Estructura semántica: <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+                  <li>Responsive con Bootstrap (grid, ratio 16:9, utilidades).</li>
+                  <li>Validación nativa: <em>autofocus</em>, <em>email</em>, <em>date</em>, <em>number</em>, <em>required</em>, <em>autocomplete</em>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TABLA -->
+        <section id="tabla" class="mb-4">
+          <h2 class="visually-hidden">Tabla de competencias</h2>
+          <h3 class="h6 text-uppercase text-muted">Competencias de liderazgo — Aplicación en Ingeniería Industrial</h3>
+          <div class="table-responsive shadow-sm rounded">
+            <table class="table table-striped table-hover align-middle mb-0">
+              <thead class="table-dark">
+                <tr>
+                  <th>Competencia</th>
+                  <th>Impacto en planta/proceso</th>
+                  <th>Prácticas / Métricas IE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Comunicación efectiva</td><td>Alinea objetivos, reduce reprocesos, acelera cambios.</td><td>Briefs visuales, Andon, reportes A3</td></tr>
+                <tr><td>Liderazgo servicial</td><td>Empodera al equipo para resolver cuellos de botella.</td><td>Gemba Walks, Kaizen diarios, 5S</td></tr>
+                <tr><td>Toma de decisiones con datos</td><td>Prioriza mejoras de alto impacto y bajo costo.</td><td>OEE, lead time, takt time, Pareto</td></tr>
+                <tr><td>Gestión del cambio</td><td>Minimiza resistencia y acelera adopción de mejoras.</td><td>PDCA, roadmap de despliegue, training</td></tr>
+                <tr><td>Agilidad y adaptación</td><td>Responde rápido a la demanda y variabilidad.</td><td>Kanban, SMED, Scrum para proyectos</td></tr>
+                <tr><td>Sostenibilidad y ética</td><td>Reduce impactos ambientales y mejora reputación.</td><td>Indicadores de residuos, energía y seguridad</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section id="formulario" class="mb-5">
+          <h2 class="visually-hidden">Formulario</h2>
+          <h3 class="h6 text-uppercase text-muted">Propón una mejora de liderazgo en tu proceso</h3>
+
+          <div id="formStatus" class="alert alert-success d-none" role="alert">
+            ¡Gracias! Tu propuesta fue enviada.
+          </div>
+
+          <form class="row g-3 card card-body shadow-sm"
+                  id="formulario"
+                action="https://formspree.io/f/mnngojea"
+                method="POST" autocomplete="on">
+            <div class="col-md-6">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input id="nombre" name="nombre" type="text" class="form-control" required autofocus>
+            </div>
+            <div class="col-md-6">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input id="correo" name="correo" type="email" class="form-control" placeholder="tu@correo.com" required>
+            </div>
+            <div class="col-md-6">
+              <label for="fecha" class="form-label">Fecha</label>
+              <input id="fecha" name="fecha" type="date" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label for="liderazgo" class="form-label">Nivel actual de liderazgo en tu equipo (1–10)</label>
+              <input id="liderazgo" name="liderazgo" type="number" min="1" max="10" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label for="area" class="form-label">Área / Proceso (opcional)</label>
+              <input id="area" name="area" type="text" class="form-control" placeholder="Producción, logística, calidad...">
+            </div>
+            <div class="col-12">
+              <label for="mensaje" class="form-label">Describe una mejora concreta (Lean/KPI/seguridad) que liderarías en un área de planta:</label>
+              <textarea id="mensaje" name="mensaje" rows="3" minlength="10" maxlength="300" class="form-control" required
+                        placeholder="Ej.: Implementar 5S en empaque, tablero Kanban en logística, medir OEE en línea 2..."></textarea>
+            </div>
+            <div class="col-12 d-flex justify-content-between">
+              <a href="#top" class="btn btn-outline-secondary">↑ Volver arriba</a>
+              <button type="submit" class="btn btn-primary">Enviar propuesta</button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <!-- Columna lateral -->
+      <aside class="col-lg-4">
+        <h2 class="visually-hidden">Recursos recomendados</h2>
+        <h3 class="h6 text-uppercase text-muted mb-3">Recursos recomendados</h3>
+
+        <a href="https://teamhood.com/project-management/kaizen-tools/" target="_blank" rel="noopener"
+           class="d-flex gap-2 mb-3 align-items-start text-decoration-none">
+          <div class="thumb">
+            <svg viewBox="0 0 160 90" class="thumb-svg" role="img" aria-label="Miniatura Kaizen">
+              <rect width="160" height="90" rx="8" fill="#dee2e6"></rect>
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#6c757d">Kaizen</text>
+            </svg>
+          </div>
+          <div class="small text-body">
+            <div class="fw-semibold">Kaizen práctico en planta</div>
+            <div class="text-muted">Artículo • fundamentos</div>
+          </div>
+        </a>
+
+        <a href="https://www.indx.com/es/solution/overall-equipment-effectiveness-oee-and-key-performance-indicators-kpi"
+           target="_blank" rel="noopener" class="d-flex gap-2 mb-3 align-items-start text-decoration-none">
+          <div class="thumb">
+            <svg viewBox="0 0 160 90" class="thumb-svg" role="img" aria-label="Miniatura OEE">
+              <rect width="160" height="90" rx="8" fill="#dee2e6"></rect>
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#6c757d">OEE</text>
+            </svg>
+          </div>
+          <div class="small text-body">
+            <div class="fw-semibold">Cómo medir OEE</div>
+            <div class="text-muted">Guía rápida</div>
+          </div>
+        </a>
+
+        <a href="https://www.scrum.org/resources/blog/why-scrum-mastery-step-toward-leadership"
+           target="_blank" rel="noopener" class="d-flex gap-2 mb-3 align-items-start text-decoration-none">
+          <div class="thumb">
+            <svg viewBox="0 0 160 90" class="thumb-svg" role="img" aria-label="Miniatura Scrum">
+              <rect width="160" height="90" rx="8" fill="#dee2e6"></rect>
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="12" fill="#6c757d">Scrum</text>
+            </svg>
+          </div>
+          <div class="small text-body">
+            <div class="fw-semibold">Scrum para proyectos de mejora</div>
+            <div class="text-muted">Marco ágil</div>
+          </div>
+        </a>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-1">Validadores W3C:
+      <a class="text-info" href="https://validator.w3.org/" target="_blank" rel="noopener">HTML5</a> ·
+      <a class="text-info" href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener">CSS3</a>
+    </p>
+    <p class="small mb-0">&copy; 2025 Jersson Vásquez — Proyecto académico Universidad EAN</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JS: Like/Share + Envío Formspree + Búsqueda -->
+  <script>
+    // Like
+    const likeBtn = document.getElementById('likeBtn');
+    likeBtn.addEventListener('click', () => {
+      const pressed = likeBtn.getAttribute('aria-pressed') === 'true';
+      likeBtn.setAttribute('aria-pressed', String(!pressed));
+      likeBtn.classList.toggle('btn-primary', !pressed);
+      likeBtn.classList.toggle('btn-light', pressed);
+    });
+
+    // Share
+    const shareBtn = document.getElementById('shareBtn');
+    shareBtn.addEventListener('click', async () => {
+      const data = { title: document.title, text: 'Mira mi proyecto de Ingeniería Industrial (EAN)', url: location.href };
+      if (navigator.share) {
+        try { await navigator.share(data); } catch (e) {}
+      } else {
+        try { await navigator.clipboard.writeText(location.href); alert('Enlace copiado'); }
+        catch { alert('No se pudo compartir. Copia el enlace manualmente.'); }
+      }
+    });
+
+        // 1) Filtra filas de la tabla
+        const rows = document.querySelectorAll('#tabla tbody tr');
+        let anyRow = false;
+        rows.forEach(tr => {
+          const hit = tr.innerText.toLowerCase().includes(q);
+          tr.classList.toggle('d-none', !hit);
+          if (hit) anyRow = true;
+        });
+
+        // 2) Encuentra primera sección que coincida y desplaza
+        const sections = ['#portada', '#video', '#tabla', '#formulario'].map(sel => document.querySelector(sel)).filter(Boolean);
+        const firstHit = sections.find(sec => sec.innerText.toLowerCase().includes(q));
+
+        if (firstHit) {
+          firstHit.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          firstHit.classList.add('search-focus');
+          setTimeout(() => firstHit.classList.remove('search-focus'), 1200);
+        } else if (!anyRow) {
+          alert('Sin resultados para: ' + inputSearch.value);
+        }
+      });
+    }
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
